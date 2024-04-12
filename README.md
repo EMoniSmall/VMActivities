@@ -40,6 +40,12 @@ Step 4: Inside VM1, in Windows Powershell, type ping, the private IP address, th
 
 ![mstsc_FlzMu1O6j7](https://github.com/EMoniSmall/VMActivities/assets/166156618/c60aa471-bdc5-4910-9976-495391dc7781)
 
-Step 5: In Azure, find VM2 Networking. Clicking in will bring you to Network Settings. 
+Step 5: In Azure, Find Network Security Group. Locate your Ubuntu Network security group, in this case VM2-nsg. Un the Left Click into Inbound Security Rules. Create a new Port Rule for Inbound Traffic. Click ICMP Protocol and Deny. Under Priority, enter a number below 300 and hit Add.
+
+![chrome_QGzrRnkXrg](https://github.com/EMoniSmall/VMActivities/assets/166156618/c60e29db-aee5-4a75-ae19-b69e4805e700)
+
+Step 6: Return to your Windows VM, Powershell and observe the ping requests. They should start to time out. Removing the protocol should allow the ping requests through again. 
+
+
 
 
