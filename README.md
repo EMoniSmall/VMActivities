@@ -18,12 +18,28 @@ Step 2: Inside your Windows 10 VM, visit www.wireshark.org and install Wireshark
 
 ![image](https://github.com/EMoniSmall/VMActivities/assets/166156618/8bac0873-df59-4ec2-ad39-92e7819b7817)
 
-Step 3: Open another Remote Desktop connection and log into your Linux (Ubuntu) VM.
+Step 3: Open Windows Powershell on your Windows 10 VM.
+
+![image](https://github.com/EMoniSmall/VMActivities/assets/166156618/e9042164-67f6-478b-b051-f8a157d194b9)
 
 <h2>Observing ICMP Traffic 🚦</h2>
 
-Step 1: On Wireshark, select the Ethernet Connection and click the bluefin in the top left to start capturing packets. 
+> [!Note]
+> What is ICMP?
+> 
+>ICMP stands for Internet Control Message Protocol. It is used to send error messages and operational information during packet processing. It's often utilized by network devices like routers to communicate with each other and with hosts about network-related issues like unreachable destinations or congestion. It is crucial when diagnosing and troubleshooting connectivity problems.
+
+Step 1: On Wireshark, select the Ethernet Connection and click the bluefin in the top left to capture packets. 
 
 ![mstsc_eOg2fhb6QQ](https://github.com/EMoniSmall/VMActivities/assets/166156618/0d2b3871-10f9-4887-9fe5-6d9c8c258067)
 
-Step 2: In the search bar, "Apply a display filter", type "icmp". Observe 
+Step 2: In the search bar, "Apply a display filter", type "icmp". Observe the Virtual Network within Wireshark. You should now only see icmp traffic. 
+
+Step 3: In Azure, retrieve the private IP for your Ubuntu (Linux) VM. This can be found under Networking in VM2 Properties. 
+Step 4: Inside VM1, in Windows Powershell, type ping, the private IP address, then "-t". This will initiate a perpetual ping to your Ubuntu VM. Observe the ping activity. 
+
+![mstsc_FlzMu1O6j7](https://github.com/EMoniSmall/VMActivities/assets/166156618/c60aa471-bdc5-4910-9976-495391dc7781)
+
+Step 5: In Azure, find VM2 Networking. Clicking in will bring you to Network Settings. 
+
+
