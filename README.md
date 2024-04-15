@@ -90,8 +90,25 @@ Step 3: Once you hit Enter, you can observe the dhcp traffic on wireshark.
 
 <h1>Observing DNS Traffic 🚦</h1>
 
+> [!Note]
+> What is DNS?
+> DNS stands for Domain Name System. It refers to the communication between DNS clients and DNS servers on a network. It involves clients asking servers for IP addresses that correspond to domain names. Clients send queries, and servers respond with IP addresses.
+
+Step 1: On Wireshark, filter for DNS. You may notice it's already capturing DNS traffic.
+
+Step 2: On Powershell, type [nslookup www.google.com]. You should see google.com responding with its ip address and other information.
+
+![mstsc_EESfTlfqiA](https://github.com/EMoniSmall/VMActivities/assets/166156618/350f1e87-a7e5-45ee-8fd3-8492f91618f4)
+
+<h1>Observing RDP Traffic 🚦</h1>
+
+> [!Note]
+> What is RDP Traffic?
+> RDP stands for Remote Desktop Protocol. It is the data exchanged between a client and a server during a remote desktoip session. it allows users to control a remote computer as if they were physically present at that computer.
+
+Step 1: In Wireshark, to filter for RDP traffic, type [tcp.port==3389]. You'll notice the immediate traffic on wireshark caused by our own current remote connection. Everything we type every mouse movement is transmitted here. 
+
+![mstsc_cpjlHKlycg](https://github.com/EMoniSmall/VMActivities/assets/166156618/b6b23444-929e-44a5-abe4-160f3bdc57d7)
 
 
-
-
-
+<h2>This concludes this guide. Thank you for reading. </h2>
