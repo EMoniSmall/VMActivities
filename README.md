@@ -1,4 +1,4 @@
-<h1>Observing Different Traffic Types in a Virtual Network 🔍 </h1>
+<h1>Observing Different Network Protocols 🔍 </h1>
 <h2>Expectations 🤔</h2>
 
 > [!Important]
